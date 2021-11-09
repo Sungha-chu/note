@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Note Interface</title>
+<link rel="stylesheet" type="text/css" href="TheNOTE.css"/>
+<!-- The core Firebase JS SDK is always required and must be listed first --> 
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+<!--script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app-check.js"></script-->
+<!-- Add Firebase products that you want to use -->
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-analytics.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+<script type="text/javascript" src="TheNOTE.js"></script>
+</head>
+<body>
+
+<center>
+<div class="container">
+<h1 style="color:white;font-size:25px;">TheNOTE</h1><br>
+<p><label class="label_input">Name : </label><input type="text" id="name" class="text_field"/></p>
+<p><label class="label_input">Date : </label><input type="text" id="date" class="text_field" onfocus="(this.type='date')" onblur="(this.type='text')"/></p>
+<p><label class="label_input">Time : </label><input type="text" style="text-align:center" placeholder="00:00" id="stratTime" class="time_text_field1" onfocus="(this.type='time')" onblur="(this.type='text')"/>
+<label class="time_label_input">to</label>
+<input type="text" style="text-align:center" placeholder="00:00" id="endTime" class="time_text_field2" onfocus="(this.type='time')" onblur="(this.type='text')"/></p>
+<p><label class="label_input">Location : </label><input type="text" id="location" class="text_field"/></p>
+<p><label class="label_input">Event : </label><input type="text" id="event" class="text_field"/></p>
+<br>
+<input type="button" id="btn" value="ADD" onclick="add();"/>
+<input type="button" id="btn" value="Delete" onclick="del();"/>
+<input type="button" id="btn" value="Modify" onclick="mod();"/>
+<br><br>
+</div><br><br>
+
+<!--details-->
+<table class="table_field" id="table">
+<caption>Detials</caption>
+<tr class="table_field"><!--table's first child-->
+<th>People</th><!--table's header/title-->
+<th>Location</th>
+<th>Event</th>
+<th>Date</th>
+<th>Time</th>
+</tr>
+<tr>
+<td>Cindy</td>
+<td>Taoyuan</td>
+<td>Key Code</td>
+<td>July:22</td>
+<td>21:14:01</td>
+</tr>
+<tr>
+<td>Andy</td>
+<td>Taoyuan</td>
+<td>Running</td>
+<td>January:18</td>
+<td>23:00:21</td>
+</tr>
+</table>
+
+<br>
+</center>
+
+
+<div class="note_field">
+<br><h2>Content</h2>
+<table id="content"></table></div>
+
+<script>
+//function implement
+var table = document.getElementById('table'), selectedRowIndexs;
+for(var i = 0; i < table.rows.length; i++){
+	table.rows[i].onclick = function(){//each element selected from rows will involked this function
+		selectedRowIndexs = this.rowIndex;
+		document.getElementById("name").value = this.cells[0].innerHTML;
+		document.getElementById("date").value = this.cells[1].innerHTML;
+		document.getElementById("time").value = this.cells[2].innerHTML;
+		document.getElementById("location").value = this.cells[3].innerHTML;
+		document.getElementById("event").value = this.cells[4].innerHTML;
+	};
+}
+</script>
+</body>
+</html>
