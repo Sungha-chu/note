@@ -13,45 +13,34 @@
 <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
 <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
 </head>
-
 <body>
 <center>
 <div class="container">
-<h1 style="color:white;font-size:25px;">TheNOTE-function test</h1><br>
+<h1 style="color:white;font-size:50px;">TheNOTE</h1>
 <p><label class="label_input">Name : </label><input type="text" id="name" placeholder="name..." class="text_field"/></p>
 <p><label class="label_input">Date : </label><input type="text" id="date" placeholder="yyyy/MM/dd" class="text_field" onfocus="(this.type='date')" onblur="(this.type='text')"/></p>
-<p><label class="label_input">Strat-time : </label><input type="text" id="Stime" placeholder="00:00" class="text_field" onfocus="(this.type='time')" onblur="(this.type='text')"/>
-<label class="time_label_input">to</label>
-<label class="label_input">End-time : </label><input type="text" id="Etime" placeholder="00:00" class="text_field" onfocus="(this.type='time')" onblur="(this.type='text')"/></p>
+<p><label class="label_input">Strat-time : </label><input type="text" id="Stime" placeholder="00:00" class="text_field" onfocus="(this.type='time')" onblur="(this.type='text')"/></p>
+<p><label class="label_input">End-time : </label><input type="text" id="Etime" placeholder="00:00" class="text_field" onfocus="(this.type='time')" onblur="(this.type='text')"/></p>
 <p><label class="label_input">Location : </label><input type="text" id="location" placeholder="loc..." class="text_field"/></p>
 <p><label class="label_input">Event : </label><input type="text" id="event" placeholder="something..." class="text_field"/></p>
 <br>
-<input type="button" id="btn" value="ADD" onclick="add();"/>
+<p><input type="button" id="btn" value="ADD" onclick="add();"/>
 <input type="button" id="btn" value="Delete" onclick="del();"/>
-<input type="button" id="btn" value="Modify" onclick="mod();"/>
-<input type="button" id="search_btn" value="Search" onclick="search();"/>
-<input type="button" disabled id="get_btn" value="Get all data" onclick="getAll();"/>
-<br><br>
-<input type="button" id="btn" value="Log out" onclick="quit();"/>
+<input type="button" id="btn" value="Modify" onclick="mod();"/></p>
+<p><input type="button" id="fun_btn" value="Search" onclick="search();"/>
+<input type="button" disabled id="fun_btn" value="Get all data" onclick="getAll();"/></p>
 
-<br><br>
 </div><br><br>
 
 <!--details-->
 Your Note Data from firebase account:
 <p id="emailaccount"></p>
-<br><br>
-
+<input type="button" id="logout_btn" value="Log out" onclick="quit();"/>
 <p id="bodyTable"></p>
 </center>
 
 <script>
-//Import the functions you need from the SDKs you need
-//import { initializeApp } from "firebase/app";
-//import { getAnalytics } from "firebase/analytics";
-// TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
-
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 var firebaseConfig = {

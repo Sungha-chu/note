@@ -3,13 +3,13 @@ background-color: rgba(126, 63, 228, 0.3);
 background-size: 100%;
 }
 #login_frame {
-width: 400px;
-padding: 20px;
+width: auto;
+padding: 30px;
 position: absolute;
 left: 50%;
 top: 50%;
-margin-left: -200px;
-margin-top: -200px;
+margin-left: -10%;
+margin-top: -10%;
 background-color: rgba(255, 255, 255, 0.3);
 border-radius: 10px;
 text-align: center;
@@ -27,14 +27,14 @@ margin-left: 220px;
 #image_logo_2 {
 height:10px;
 width:10px;
-margin-botton: 22px;
+margin-bottom: 22px;
 margin-left:25px;
 }
 #image_logo_3 {
 height:10px;
 width:10px;
 margin-top: 20px;
-margin-botton: 20px;
+margin-bottom: 20px;
 margin-left: 160px;
 }
 .label_input {
