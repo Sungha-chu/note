@@ -1,10 +1,13 @@
+body{
+background-color: rgb(167, 167, 211, 0.5);
+background-size: 100%;
+}
 div.container{
 width: 50%;
-padding: 20px;
+padding: 1%;
 background-color: rgba(126, 63, 228, 0.3);
-position: relative;
 float: center;
-border-radius: 10px;
+border-radius: 100px;
 text-align: center;
 }
 form p > * {
@@ -12,81 +15,54 @@ display: inline-block;
 vertical-align: middle;
 }
 h2{
-display: inline-block;
-margin-top: 10px;
-margin-left: 20px;
-margin-right: 2%;
-font-size: 40px;
+text-shadow: 1px 1px 5px gray;
+font-size: 400%;
 color: white;
-float: left;
+float: center;
 }
 .label_input {
-font-size: 16px;
-padding: 5px;
-width: 80px;
-height: 28px;
-line-height: 26px;
+font-size: 110%;
+padding: 0.5%;
+line-height: 110%;
 text-align: center;
 color: white;
-background-color: #5B00AE;
-border-top-left-radius: 5px;
-border-bottom-left-radius: 5px;
-float:center;
-}
-.time_label_input {
-font-size: 16px;
-padding: 5px;
-width: 80px;
-height: 28px;
-line-height: 26px;
-text-align: center;
-color: white;
+margin-right: 1%;
 background-color: #5B00AE;
 border-radius: 5px;
+float:center;
 }
 .text_field {
-width: 278px;
-height: 27px;
-border-top-right-radius: 5px;
-border-bottom-right-radius: 5px;
-border: 0;
-}
-.time_text_field1 {
-width: 137px;
-height: 27px;
-border-top-right-radius: 5px;
-border-bottom-right-radius: 5px;
-border: 0;
-}
-.time_text_field2 {
-width: 139px;
+padding: 0.3%;
+width: 30%;
 height: 27px;
 border-radius: 5px;
 border: 0;
 }
 #btn {
 cursor:pointer;
-margin-right: 10px;
-margin-left: 10px;
-font-size: 14px;
-width: 100px;
-height: 28px;
-line-height: 28px;
+margin-right: 1%;
+margin-left: 1%;
+margin-bottom: 1%;
+font-size: 100%;
+height: 10%;
+width: 15%;
+line-height: 120%;
 text-align: center;
 color: white;
-background-color: #5B00AE;
+background-color: #B279E6;
 border-radius: 6px;
 border: 0;
 float: center;
-transition: all .25s ease-in-out;
+transition: all .5s ease-in-out;
 }
 #btn:hover{
-margin-right: 10px;
-margin-left: 20px;
-font-size: 14px;
-width: 100px;
-height: 28px;
-line-height: 28px;
+margin-right: 1%;
+margin-left: 1%;
+margin-bottom: 1%;
+font-size: 100%;
+width: 10%;
+height: 5%;
+line-height: 120%;
 text-align: center;
 color: white;
 background:rgba(255, 124, 31, 0.7);
@@ -94,14 +70,14 @@ border-radius: 6px;
 border: 0;
 float: center;
 }
-#fun_btn {
-cursor:pointer;
-margin-right: 5px;
-margin-left: 5px;
-font-size: 14px;
-width: auto;
-height: 28px;
-line-height: 28px;
+.fun_btn {
+margin-right: 1%;
+margin-left: 1%;
+margin-bottom: 1%;
+font-size: 100%;
+width: 15%;
+height: 6%;
+line-height: 120%;
 text-align: center;
 color: white;
 background-color: #0088FF;
@@ -110,16 +86,50 @@ border: 0;
 float: center;
 transition: all .5s ease-in-out;
 }
-#fun_btn:hover{
-margin-right: 10px;
-margin-left: 20px;
-font-size: 14px;
-width: auto+10px;
-height: 28px;
-line-height: 28px;
+.fun_btn:hover{
+cursor:pointer;
+margin-right: 1%;
+margin-left: 1%;
+margin-bottom: 1%;
+font-size: 100%;
+width: 10%;
+height: 6%;
+line-height: 120%;
 text-align: center;
 color: white;
-background-color:#00FFE6;
+background-color:#00C7B3;
+border-radius: 6px;
+border: 0;
+float: center;
+}
+.out_btn {
+margin-right: 1%;
+margin-left: 1%;
+margin-bottom: 1%;
+font-size: 100%;
+width: 10%;
+height: 6%;
+line-height: 120%;
+text-align: center;
+color: white;
+background-color: #0088FF;
+border-radius: 6px;
+border: 0;
+float: center;
+transition: all .5s ease-in-out;
+}
+.out_btn:hover{
+cursor:pointer;
+margin-right: 1%;
+margin-left: 1%;
+margin-bottom: 1%;
+font-size: 100%;
+width: 8%;
+height: 6%;
+line-height: 120%;
+text-align: center;
+color: white;
+background-color:#00C7B3;
 border-radius: 6px;
 border: 0;
 float: center;
@@ -132,31 +142,35 @@ border-bottom-style: solid;
 border-top-style: solid;
 }
 table{
+width: 100%;
 border-collapse: collapse;
 border-bottom-style: solid;
 border-top-style: solid;
 }
 th, td{
-padding: 10px 10px;
+text-align: center;
+padding: 1% 5%;
 }
 tbody tr:hover{
 background:gray;
 }
 div.note_field1{
 background-color: rgba(126, 63, 228, 0.4);
-margin-bottom: 10px;
+margin-bottom: 2%;
+width: 70%;
 height: auto;
-width: 50%;
-padding: 20px;
+display: inline-block;
+padding: 2%;
 border-radius: 50px;
 float: center;
 }
 div.note_field2{
 background-color: rgba(66, 63, 228, 0.4);
-margin-bottom: 10px;
+margin-bottom: 2%;
+width: 70%;
 height: auto;
-width: 50%;
-padding: 20px;
+display: inline-block;
+padding: 2%;
 border-radius: 50px;
 float: center;
 }

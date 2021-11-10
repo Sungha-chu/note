@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>For function test</title>
+<title>Your Notebook</title>
 <link rel="stylesheet" type="text/css" href="TheNOTE.css"/>
 <!-- The core Firebase JS SDK is always required and must be listed first --> 
 <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
@@ -16,7 +16,7 @@
 <body>
 <center>
 <div class="container">
-<h1 style="color:white;font-size:50px;">TheNOTE</h1>
+<h2>TheNOTE</h2>
 <p><label class="label_input">Name : </label><input type="text" id="name" placeholder="name..." class="text_field"/></p>
 <p><label class="label_input">Date : </label><input type="text" id="date" placeholder="yyyy/MM/dd" class="text_field" onfocus="(this.type='date')" onblur="(this.type='text')"/></p>
 <p><label class="label_input">Strat-time : </label><input type="text" id="Stime" placeholder="00:00" class="text_field" onfocus="(this.type='time')" onblur="(this.type='text')"/></p>
@@ -27,15 +27,15 @@
 <p><input type="button" id="btn" value="ADD" onclick="add();"/>
 <input type="button" id="btn" value="Delete" onclick="del();"/>
 <input type="button" id="btn" value="Modify" onclick="mod();"/></p>
-<p><input type="button" id="fun_btn" value="Search" onclick="search();"/>
-<input type="button" disabled id="fun_btn" value="Get all data" onclick="getAll();"/></p>
+<p><input type="button" class=" fun_btn" id="fun_btn" value="Search" onclick="search();"/>
+<input type="button" disabled class=" fun_btn" id="get_fun_btn" value="Get all data" onclick="getAll();"/></p>
 
 </div><br><br>
 
 <!--details-->
 Your Note Data from firebase account:
 <p id="emailaccount"></p>
-<input type="button" id="logout_btn" value="Log out" onclick="quit();"/>
+<input type="button" id="logout_btn" value="Log out" class="out_btn" onclick="quit();/">
 <p id="bodyTable"></p>
 </center>
 
@@ -56,6 +56,16 @@ var firebaseConfig = {
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig); 
 firebase.analytics();
+
+window.onload = getAllData;
+window.addEventListener('beforeunload', function(e){		
+	/*if(confirm("Account'll automatically sign out, still close window ?")){
+		firebase.auth().signOut();
+		window.close();
+	}*/
+	e.preventDefault();
+	e.returnValue = "";
+});
 
 var divChange = true;
 var uid;
@@ -149,7 +159,6 @@ firebase.auth().onAuthStateChanged((user) => {
   }
 });
 }
-window.onload = getAllData;
 
 function addItemToTable(time, name, location, event, tbody){	
 	let trow_2 = document.createElement('tr');
@@ -225,7 +234,7 @@ function quit(){
 function getAll(){
 	document.getElementById('bodyTable').innerHTML = "";
 	document.getElementById('emailaccount').innerHTML = "";
-	document.getElementById('get_btn').disabled = true;
+	document.getElementById('get_fun_btn').disabled = true;
 	getAllData();
 }
 function search(){
@@ -236,7 +245,7 @@ function search(){
 	}
 	document.getElementById('bodyTable').innerHTML = "";
 	document.getElementById('emailaccount').innerHTML = "";
-	document.getElementById('get_btn').disabled = false;
+	document.getElementById('get_fun_btn').disabled = false;
 	
 	var ref = firebase.database().ref("note/"+uid);
 	ref.once('value', function(snapshot){
