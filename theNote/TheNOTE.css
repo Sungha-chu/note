@@ -1,0 +1,176 @@
+body{
+background-color: rgb(167, 167, 211, 0.5);
+background-size: 100%;
+}
+div.container{
+width: 50%;
+padding: 1%;
+background-color: rgba(126, 63, 228, 0.3);
+float: center;
+border-radius: 100px;
+text-align: center;
+}
+form p > * {
+display: inline-block;
+vertical-align: middle;
+}
+h2{
+text-shadow: 1px 1px 5px gray;
+font-size: 400%;
+color: white;
+float: center;
+}
+.label_input {
+font-size: 110%;
+padding: 0.5%;
+line-height: 110%;
+text-align: center;
+color: white;
+margin-right: 1%;
+background-color: #5B00AE;
+border-radius: 5px;
+float:center;
+}
+.text_field {
+padding: 0.3%;
+width: 30%;
+height: 27px;
+border-radius: 5px;
+border: 0;
+}
+#btn {
+cursor:pointer;
+margin-right: 1%;
+margin-left: 1%;
+margin-bottom: 1%;
+font-size: 100%;
+height: 10%;
+width: 15%;
+line-height: 120%;
+text-align: center;
+color: white;
+background-color: #B279E6;
+border-radius: 6px;
+border: 0;
+float: center;
+transition: all .5s ease-in-out;
+}
+#btn:hover{
+margin-right: 1%;
+margin-left: 1%;
+margin-bottom: 1%;
+font-size: 100%;
+width: 10%;
+height: 5%;
+line-height: 120%;
+text-align: center;
+color: white;
+background:rgba(255, 124, 31, 0.7);
+border-radius: 6px;
+border: 0;
+float: center;
+}
+.fun_btn {
+margin-right: 1%;
+margin-left: 1%;
+margin-bottom: 1%;
+font-size: 100%;
+width: 15%;
+height: 6%;
+line-height: 120%;
+text-align: center;
+color: white;
+background-color: #0088FF;
+border-radius: 6px;
+border: 0;
+float: center;
+transition: all .5s ease-in-out;
+}
+.fun_btn:hover{
+cursor:pointer;
+margin-right: 1%;
+margin-left: 1%;
+margin-bottom: 1%;
+font-size: 100%;
+width: 10%;
+height: 6%;
+line-height: 120%;
+text-align: center;
+color: white;
+background-color:#00C7B3;
+border-radius: 6px;
+border: 0;
+float: center;
+}
+.out_btn {
+margin-right: 1%;
+margin-left: 1%;
+margin-bottom: 1%;
+font-size: 100%;
+width: 10%;
+height: 6%;
+line-height: 120%;
+text-align: center;
+color: white;
+background-color: #0088FF;
+border-radius: 6px;
+border: 0;
+float: center;
+transition: all .5s ease-in-out;
+}
+.out_btn:hover{
+cursor:pointer;
+margin-right: 1%;
+margin-left: 1%;
+margin-bottom: 1%;
+font-size: 100%;
+width: 8%;
+height: 6%;
+line-height: 120%;
+text-align: center;
+color: white;
+background-color:#00C7B3;
+border-radius: 6px;
+border: 0;
+float: center;
+}
+tbody tr{
+cursor:pointer;
+transition: all .25s ease-in-out;
+border-collapse: collapse;
+border-bottom-style: solid;
+border-top-style: solid;
+}
+table{
+width: 100%;
+border-collapse: collapse;
+border-bottom-style: solid;
+border-top-style: solid;
+}
+th, td{
+text-align: center;
+padding: 1% 5%;
+}
+tbody tr:hover{
+background:gray;
+}
+div.note_field1{
+background-color: rgba(126, 63, 228, 0.4);
+margin-bottom: 2%;
+width: 70%;
+height: auto;
+display: inline-block;
+padding: 2%;
+border-radius: 50px;
+float: center;
+}
+div.note_field2{
+background-color: rgba(66, 63, 228, 0.4);
+margin-bottom: 2%;
+width: 70%;
+height: auto;
+display: inline-block;
+padding: 2%;
+border-radius: 50px;
+float: center;
+}
