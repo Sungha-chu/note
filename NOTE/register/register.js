@@ -1,4 +1,9 @@
+//Import the functions you need from the SDKs you need
+//import { initializeApp } from "https://www.gstatic.com/firebasejs/9.2.0/firebase-app.js";
+//import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.2.0/firebase-analytics.js";
+// TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
+
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 var firebaseConfig = {
@@ -11,6 +16,7 @@ var firebaseConfig = {
   appId: "1:932533752470:web:0820c142640ce94a2e68b7",
   measurementId: "G-GFYXW7NC1H"
 };
+
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 firebase.analytics();
@@ -26,6 +32,11 @@ if (account == "") {
 	if(account != null){
 		console.log("working...");
 		firebase.auth().createUserWithEmailAndPassword(account, pass).then(function(){
+			//set account uid
+			//let emailUser = firebase.database().ref("/").child("user").child(account.replace(/\@|\./g,"")+pass);//.child(account.replace(/\@|\./g,"")+pass);;
+			//emailUser.set({
+			//	uid:user.uid
+			//});
 			if(confirm("Register successfully, direct to log in ?")){
 				window.location.href="../login/login.html";
 			} else{
